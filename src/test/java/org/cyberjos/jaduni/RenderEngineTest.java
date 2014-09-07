@@ -131,6 +131,7 @@ public class RenderEngineTest {
 
         RenderEngine.set("mockRenderEngine", mockRenderEngine);
         final RenderEngine returnedRenderEngine = RenderEngine.get("mockRenderEngine");
-        assertEquals("These two object should be equal.", mockRenderEngine, returnedRenderEngine);
+        assertNotNull("The return object must not bu null.", returnedRenderEngine);
+        assertEquals("These two objects should be equal.", mockRenderEngine, returnedRenderEngine);
     }
 }
